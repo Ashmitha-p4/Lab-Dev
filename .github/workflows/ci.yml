@@ -3,10 +3,10 @@ name: CI Pipeline
 on:
   push:
     branches:
-      - master  # This will trigger the workflow on push to the 'master' branch
+      - master
   pull_request:
     branches:
-      - master  # This will trigger the workflow on pull requests to the 'master' branch
+      - master
 
 jobs:
   build:
@@ -20,6 +20,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'
+          distribution: 'adoptopenjdk'  # Added distribution
 
       - name: Build with Maven
         run: mvn clean install
