@@ -6,7 +6,7 @@ pool:
 
 steps:
 - task: Maven@3
-  displayName: 'Run Maven Tests'
+  displayName: 'Run Maven Regression Tests'
   inputs:
     mavenPomFile: 'pom.xml'
     goals: 'clean test'
